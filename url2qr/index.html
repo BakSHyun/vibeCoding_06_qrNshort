@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#fbf9f3" />
+    <meta name="description" content="주소를 입력해 QR 코드를 만들고 JPG로 저장하세요." />
+    <title>URL2QR — 링크를 QR 코드로</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+      integrity="sha384-3zSEDfvllQohrq0PHL1fOXJuC/jSOO34H46t6UQfobFOmxE5BpjjaIJY5F2/bMnU"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a href="./" aria-label="URL2QR 처음으로"><img src="img/logo.png" alt="URL2QR" /></a>
+      <span class="header-note">링크를 간편하게 공유하세요 <span aria-hidden="true">↗</span></span>
+    </header>
+
+    <main>
+      <div class="intro">
+        <span class="eyebrow"><span class="eyebrow-dot"></span> YOUR LINK, REIMAGINED</span>
+        <h1>하나의 링크, <em>새로운 연결.</em></h1>
+        <p>주소를 입력하면 바로 QR 코드가 만들어져요.</p>
+      </div>
+
+      <section class="workspace" id="workspace" aria-label="QR 코드 만들기">
+        <div class="result" id="result" hidden>
+          <p class="result-label">YOUR QR CODE <span aria-hidden="true">✦</span></p>
+          <button class="qr-button" id="download" type="button" aria-label="QR 코드를 JPG 파일로 다운로드" title="클릭하여 JPG 다운로드">
+            <span id="qrcode" aria-hidden="true"></span>
+          </button>
+          <p class="download-hint">QR 코드를 클릭하면 JPG로 저장돼요 <span aria-hidden="true">↗</span></p>
+        </div>
+
+        <div class="entry">
+          <label for="url">변환할 링크를 입력해 주세요</label>
+          <form id="qr-form" novalidate>
+            <span class="link-icon" aria-hidden="true">↗</span>
+            <input id="url" type="text" inputmode="url" autocomplete="url" autocapitalize="off" spellcheck="false" placeholder="https://example.com" aria-describedby="message" />
+            <button class="submit-button" type="submit">QR 만들기 <span aria-hidden="true">→</span></button>
+          </form>
+          <p id="message" class="message" role="status" aria-live="polite">URL을 입력하고 버튼을 눌러보세요.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>URL2QR <span aria-hidden="true">✳</span> 간단하게 만들고, 자유롭게 공유하세요.</footer>
+  </body>
+</html>

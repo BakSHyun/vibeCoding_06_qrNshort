@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#10182f" />
+    <meta name="description" content="긴 URL을 짧은 주소로 바꾸고 복사하세요." />
+    <title>URL 단축하기 — QRnShort</title>
+    <link rel="stylesheet" href="../style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="site-wrap">
+      <header class="site-header">
+        <a class="brand" href="../index.html" aria-label="QRnShort 홈">QR<span>n</span>Short <i aria-hidden="true">✦</i></a>
+        <a class="back-link" href="../index.html">← 도구 선택으로</a>
+      </header>
+      <main class="shortener">
+        <div class="eyebrow">02 / MAKE IT SHORTER <span aria-hidden="true">✳</span></div>
+        <h1>긴 링크를 <em>짧게.</em></h1>
+        <p class="lead">복잡한 주소를 공유하기 좋은 짧은 링크로 바꿔보세요.</p>
+
+        <section class="shortener-card" aria-label="URL 단축 도구">
+          <form id="short-form" novalidate>
+            <label for="long-url">URL 입력</label>
+            <div class="input-row">
+              <input id="long-url" type="text" inputmode="url" autocomplete="url" autocapitalize="off" spellcheck="false" placeholder="https://example.com/very/long/link" aria-describedby="feedback" />
+              <button id="shorten" type="submit" disabled>단축하기 <span aria-hidden="true">→</span></button>
+            </div>
+          </form>
+          <div class="output-area">
+            <label for="short-url">단축된 URL</label>
+            <div class="input-row output-row">
+              <input id="short-url" type="text" placeholder="단축된 주소가 여기에 나타나요" readonly />
+              <button id="copy" type="button" disabled>복사</button>
+            </div>
+          </div>
+          <p id="feedback" class="feedback" role="status" aria-live="polite">URL을 입력하면 단축하기 버튼이 활성화돼요.</p>
+        </section>
+
+        <p class="privacy-note">단축 서비스(spoo.me)로 입력한 주소가 전송됩니다. 공개 가능한 URL만 입력해 주세요.</p>
+        <a class="other-tool" href="../url2qr/index.html">QR 코드도 만들어 볼까요? <span aria-hidden="true">↗</span></a>
+      </main>
+      <footer>QRnShort <span aria-hidden="true">✦</span> 만들고, 줄이고, 공유하세요.</footer>
+    </div>
+  </body>
+</html>
